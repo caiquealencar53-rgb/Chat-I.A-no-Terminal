@@ -31,7 +31,7 @@ gsk_xxxxxxxxxxxxxxxxx
 
 Guarde ela.
 ```
-#3. Instalar dependências no Linux
+# 3. Instalar dependências no Linux
 
 Atualize o sistema:
 
@@ -40,23 +40,29 @@ sudo apt update
 Instale o venv:
 
 sudo apt install python3-venv
-#4. Criar projeto
+
+# 4. Criar projeto
+
 mkdir ~/ia-terminal
 cd ~/ia-terminal
-#5. Criar ambiente virtual
+
+# 5. Criar ambiente virtual
+
 python3 -m venv venv
 
-#6. Ativar ambiente virtual
+# 6. Ativar ambiente virtual
+
 source venv/bin/activate
 
 Se funcionar aparecerá:
 
 (venv)
-#7. Instalar biblioteca Groq
+# 7. Instalar biblioteca Groq
 pip install groq
-#8. Criar arquivo da IA
+# 8. Criar arquivo da IA
 nano ia.py
-#9. Código da IA
+# 9. Código da IA
+```
 from groq import Groq
 
 print("Iniciando IA...")
@@ -81,7 +87,8 @@ while True:
     )
 
     print("\nIA:", resposta.choices[0].message.content)
-#10. Colocar API Key
+```
+# 10. Colocar API Key
 
 Troque:
 
@@ -90,25 +97,28 @@ SUA_CHAVE_GSK
 pela sua chave real:
 
 gsk_...
-#11. Salvar no Nano
+
+# 11. Salvar no Nano
+
 CTRL + O
 ENTER
 CTRL + X
-#12. Executar IA
+# 12. Executar IA
 python3 ia.py
-13. Resultado esperado
+# 13. Resultado esperado
 Iniciando IA...
 IA pronta!
 >>> oi
 IA: Olá! Como posso ajudar?
-#14. Rodar em outro terminal
+>>> 
+# 14. Rodar em outro terminal
 
 Sempre execute:
 
 cd ~/ia-terminal
 source venv/bin/activate
 python3 ia.py
-#15. Transformar em comando global
+# 15. Transformar em comando global
 Criar script
 nano ~/ia
 
@@ -122,9 +132,12 @@ Dar permissão
 chmod +x ~/ia
 Mover para PATH
 sudo mv ~/ia /usr/local/bin/ia
-#16. Usar em qualquer terminal
+
+# 16. Usar em qualquer terminal
+
 ia
-#17. Trocar modelos
+
+# 17. Trocar modelos
 
 Exemplo:
 
